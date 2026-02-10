@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulley-Financial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo" class="logo-image">
+            <span class="logo-text">MULLEY FINANCIAL</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="partners.html" class="nav-link">Partners</a></li>
+        
+        <form class="search-container">
+    <input type="text" placeholder="Search..." name="search">
+  </form>
+  </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">FINANCIAL CONSULTING FIRM,</h1>
+            <p class="hero-description">Your trusted partner in financial planning and investment management.</p>
+            <button id="openModal" class="cta-btn">Get Started</button>
+        </div>
+        <div class="modal" id="modal">
+  <div class="modal-box">
+    <span id="closeModal">&times;</span>
+
+    <h2>Fill in Your Details</h2>
+
+    <form>
+      <div class="row">
+        <input type="text" placeholder="First Name" class="border" required>
+        <input type="text" placeholder="Last Name" class="border" required>
+      </div>
+
+      <input type="email" placeholder="Email Address" class="border" required><br>
+      <input type="number" placeholder="Phone Number" class="border" required><br>
+
+      <select required class="border">
+        <option value="">Select a Service</option>
+        <option>Drafting & Design</option>
+        <option>Mechanical Plans</option>
+        <option>Electrical Drawings</option>
+        <option>Software Solutions</option>
+      </select><br> <br>
+
+      <textarea name="message" id="message" rows="10" cols="45" placeholder="How may we be of assistance to you?" class="border"></textarea>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+const openModal = document.getElementById("openModal");
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+
+openModal.onclick = () => modal.style.display = "flex";
+closeModal.onclick = () => modal.style.display = "none";
+
+window.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
+</script>
+
+    </section>
+    <br><br>
+    <section></section>
+</body>
+</html>

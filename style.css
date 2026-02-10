@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: garamond, Times New Roman;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f8f6f4;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 18px;
+    transition: var(--transition);
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #040400;
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.1);
+}
+
+.logo:hover .logo-text {
+    transform:scale(1.1)
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #0d5d66;
+}
+.search-container {
+  margin-left: auto; /* Pushes the search bar to the right */
+}
+
+.search-container input[type=text] {
+  padding: 6px;
+  border: 1px solid #7f7c7c;
+  border-radius: 4px;
+}
+
+.hero {
+    background-image: url("assets/360_F_239343218_ksRRbP5bxXKvXszrcpLS5Lg3jky9xxyY copy.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    height: 80vh;
+    border-bottom-left-radius: 100px;
+    background-repeat: no-repeat;
+    
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 100px;
+}
+.hero-content {
+    font-family: 'Inria Serif', serif;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero-content button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #496695;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cta-btn {
+  padding: 12px 25px;
+  background: #0d5d66;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-box span {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.modal-box form input,
+.modal-box form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0d5d66;
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
