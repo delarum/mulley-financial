@@ -266,6 +266,7 @@
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
+  box-shadow: #040400 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 6px 20px;
 }
 
 .card:hover {
