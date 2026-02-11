@@ -61,6 +61,35 @@
 .nav-links a:hover {
   color: #0d5d66;
 }
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
 .search-container {
   margin-left: auto; /* Pushes the search bar to the right */
 }
@@ -141,7 +170,7 @@
   background: white;
   padding: 25px;
   width: 90%;
-  max-width: 400px;
+  max-width: 800px;
   border-radius: 10px;
   position: relative;
 }
@@ -171,15 +200,20 @@
   gap: 10px;
 }
 
+.asterisk {
+  color: red;
+}
+
 .modal-box button {
   width: 100%;
   padding: 12px;
-  background: #0d5d66;
+  background: #496695;
   color: white;
   border: none;
   margin-top: 10px;
 }
 .details-sec{
+  margin: 60px;
   background-color: #ffff;
   display: flex;
   justify-content: space-between;
@@ -216,6 +250,7 @@
   opacity: 0.85;
 }
 .card-grid {
+  margin: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -223,7 +258,7 @@
 }
 
 .card {
-  height: 280px;
+  height: 350px;
   background-size: cover;
   background-position: center;
   border-bottom-left-radius: 30px;
@@ -259,6 +294,7 @@
 }
 
 .more-info {
+  margin: 60px;
   background-color: #ffff;
   padding: 40px;
   text-align: center;
@@ -267,3 +303,47 @@
   width: 100%;
   height: auto;
 }
+footer{
+  margin: 60px;
+}
+
+/* know more */
+.join-us {
+  background-image: url("assets/WhatsApp Image 2026-02-11 at 10.10.16 PM.jpeg");
+  background-size: cover;
+  margin: 20px;
+  position: relative;
+  background-position: center;
+  height: 150vh;
+  border-bottom-left-radius: 100px;
+  background-repeat: no-repeat;
+}
+.hero-content {
+  position: absolute;
+  top: 350px;
+  right:50px;
+  margin: 0;
+}
+
+.text-area {
+  flex: 1;
+}
+
+.text-area h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+}
+
+.text-area p {
+  color: #040400;
+  
+
+.text-area button {
+  background: #496695;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+

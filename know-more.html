@@ -9,12 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-amber-50">
+<body class="bg-image bg-cover bg-center">
     <nav class="navbar">
         <a href="index.html" class="logo">
             <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo" class="logo-image">
             <span class="logo-text">MULLEY FINANCIAL</span>
         </a>
+         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
@@ -23,9 +24,31 @@
         
         <form class="search-container">
     <input type="text" placeholder="Search..." name="search">
+    <script>
+          function searchItems() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let items = document.querySelectorAll("#itemList li");
+
+            items.forEach(item => {
+              item.style.display = item.textContent.toLowerCase().includes(input)
+                ? "block"
+                : "none";
+            });
+          }
+        </script>
   </form>
 </ul>
-</nav>
+    </nav>
+    <section class="join-us">
 
-<section class="details-sec">
+<div class="hero-content">
+
+    <div class="text-area">
+      <h1 class="text-gray-800">We Are <br> Hiring!</h1>
+      <p>Are you interested in being part of our team? <br><br>~ Do you have any certification in the CPA financial sector including certificates, diplomas, degrees and higher qualifications? <br><br>~ Are you passionate about expanding your career experience?</p>
+      <button>Apply</button>
+    </div>
+</div>
+</section>
 </body>
+</html>
