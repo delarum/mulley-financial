@@ -18,8 +18,16 @@
         class="logo-image">
       <span class="logo-text">MULLEY FINANCIAL</span>
     </a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links">
+    <div class="menu-toggle" id="toggleMenu">☰</div>
+    <script>
+const toggle = document.getElementById("toggleMenu");
+const nav = document.getElementById("navLinks");
+
+toggle.onclick = () => {
+  nav.classList.toggle("show");
+};
+</script>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="services.html" class="nav-link">Services</a></li>
@@ -258,7 +266,7 @@
         </div>
       </div> <br>
       <div class="px-4 py-6 bg-neutral-secondary-soft md:flex md:items-center md:justify-between">
-        <span class="text-m text-body font-bold sm:text-center">© 2021 <a href="index.html"> Mulley Financial Ltd</a>. All Rights
+        <span class="text-m text-body font-bold sm:text-center">© 2026 <a href="index.html"> Mulley Financial Ltd</a>. All Rights
           Reserved.
         </span><br><br>
         <div class="flex mt-4 sm:justify-center md:mt-0 space-x-2 rtl:space-x-reverse">
