@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mulley-Financial Know More</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulley-Financial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-image bg-cover bg-center">
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo" class="logo-image">
-            <span class="logo-text">MULLEY FINANCIAL</span>
-        </a>
-         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="partners.html" class="nav-link">Partners</a></li>
-        
-        <form class="search-container">
-    <input type="text" placeholder="Search..." name="search">
-    <script>
+
+<body class="bg-amber-50">
+  <nav class="navbar">
+  
+    <a href="index.html" class="logo">
+      <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo"
+        class="logo-image">
+      <span class="logo-text">MULLEY FINANCIAL</span>
+    </a>
+      <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+
+      <form class="search-container">
+        <input type="text" placeholder="Search..." name="search" onkeyup="searchItems()">
+        <script>
           function searchItems() {
             let input = document.getElementById("searchInput").value.toLowerCase();
             let items = document.querySelectorAll("#itemList li");
@@ -36,9 +38,22 @@
             });
           }
         </script>
-  </form>
-</ul>
-    </nav>
+      </form>
+    </ul>
+     <div class="menu-toggle" id="menuToggle">
+    ☰
+
+  </div>
+  <script>
+  const toggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+</nav>
+
     <section class="join-us">
 
 <div class="hero-content">
@@ -46,7 +61,7 @@
     <div class="text-area">
       <h1 class="text-gray-800">We Are <br> Hiring!</h1>
       <p>Are you interested in being part of our team? <br><br>~ Do you have any certification in the CPA financial sector including certificates, diplomas, degrees and higher qualifications? <br><br>~ Are you passionate about expanding your career experience?</p>
-      <button>Apply</button>
+      <a href="apply.html" target="_blank"> <button>Apply</button></a>
     </div>
 </div>
 </section>

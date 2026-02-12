@@ -13,25 +13,16 @@
 
 <body class="bg-amber-50">
   <nav class="navbar">
+  
     <a href="index.html" class="logo">
       <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo"
         class="logo-image">
       <span class="logo-text">MULLEY FINANCIAL</span>
     </a>
-    <div class="menu-toggle" id="toggleMenu">☰</div>
-    <script>
-const toggle = document.getElementById("toggleMenu");
-const nav = document.getElementById("navLinks");
-
-toggle.onclick = () => {
-  nav.classList.toggle("show");
-};
-</script>
-    <ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
       <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="team.html" class="nav-link">Our Team</a></li>
 
       <form class="search-container">
         <input type="text" placeholder="Search..." name="search" onkeyup="searchItems()">
@@ -49,6 +40,18 @@ toggle.onclick = () => {
         </script>
       </form>
     </ul>
+     <div class="menu-toggle" id="menuToggle">
+    ☰
+
+  </div>
+  <script>
+  const toggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
   </nav>
 
   <section class="hero">

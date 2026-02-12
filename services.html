@@ -2,47 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mulley Financial</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulley-Financial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body class="bg-amber-50">
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo"
-                class="logo-image">
-            <span class="logo-text">MULLEY FINANCIAL</span>
-        </a>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="team.html" class="nav-link">Our Team</a></li>
+  <nav class="navbar">
+  
+    <a href="index.html" class="logo">
+      <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo"
+        class="logo-image">
+      <span class="logo-text">MULLEY FINANCIAL</span>
+    </a>
+      <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
 
-            <form class="search-container">
-                <input type="text" placeholder="Search..." name="search" onkeyup="searchItems()">
-                <script>
-                    function searchItems() {
-                        let input = document.getElementById("searchInput").value.toLowerCase();
-                        let items = document.querySelectorAll("#itemList li");
+      <form class="search-container">
+        <input type="text" placeholder="Search..." name="search" onkeyup="searchItems()">
+        <script>
+          function searchItems() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let items = document.querySelectorAll("#itemList li");
 
-                        items.forEach(item => {
-                            item.style.display = item.textContent.toLowerCase().includes(input)
-                                ? "block"
-                                : "none";
-                        });
-                    }
-                </script>
-            </form>
-        </ul>
-    </nav>
+            items.forEach(item => {
+              item.style.display = item.textContent.toLowerCase().includes(input)
+                ? "block"
+                : "none";
+            });
+          }
+        </script>
+      </form>
+    </ul>
+     <div class="menu-toggle" id="menuToggle">
+    ☰
+
+  </div>
+  <script>
+  const toggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+  </nav>
+
     <br><br>
     <section class="services-minimal" id="services">
   <h2>Our Services</h2>

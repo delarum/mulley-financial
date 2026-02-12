@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Mulley Financial</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulley-Financial</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body class="bg-amber-50">
-    <nav class="navbar">
+  <nav class="navbar">
+  
     <a href="index.html" class="logo">
       <img src="assets\financial-advisor-icon-document-person-600nw-2642558487.webp" alt="Mulley FC Logo"
         class="logo-image">
       <span class="logo-text">MULLEY FINANCIAL</span>
     </a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
       <li><a href="services.html" class="nav-link">Services</a></li>
-      <li><a href="team.html" class="nav-link">Our Team</a></li>
 
       <form class="search-container">
         <input type="text" placeholder="Search..." name="search" onkeyup="searchItems()">
@@ -40,6 +41,18 @@
         </script>
       </form>
     </ul>
+     <div class="menu-toggle" id="menuToggle">
+    ☰
+
+  </div>
+  <script>
+  const toggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
   </nav>
   
   <section class="about-section">
@@ -103,6 +116,68 @@
     </div>
   </div>
 
+</section>
+<br><br>
+<section class="team-section" id="team">
+  <h2>Our Team</h2>
+  <p class="team-intro">
+    A dedicated group of financial experts committed to accuracy, integrity and business growth.
+  </p>
+
+  <div class="team-grid">
+
+    <div class="team-member">
+      <img src="assets\vibrant-portrait-person-bright-environment.jpg" alt="Senior Consultant">
+      <div class="member-info">
+        <h3>Yvonne Mulei</h3>
+        <span>Lead Financial Consultant and Founder</span>
+        <p>
+          Oversees corporate audits, tax planning and strategic advisory services for clients.
+        </p>
+
+        <div class="socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="assets\portrait-young-man-going-out-night.jpg" alt="Tax Specialist">
+      <div class="member-info">
+        <h3>Felix Otieno</h3>
+        <span>Tax & Compliance Specialist</span>
+        <p>
+          Handles KRA compliance, i-TAX filings, eTIMS systems and dispute resolutions.
+        </p>
+
+        <div class="socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="assets\black-boy-posing-with-blue-light.jpg" alt="Audit Manager">
+      <div class="member-info">
+        <h3>Daniel Mwangi</h3>
+        <span>Media & Communications Specialist</span>
+        <p>
+          Conducts media outreach, manages public relations and handles communications for the firm.
+        </p>
+
+        <div class="socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
    <footer class="bg-amber-50">

@@ -62,30 +62,33 @@
   color: #0d5d66;
 }
 /* Hamburger hidden on desktop */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
+ .menu-toggle {
     display: block;
+    cursor: pointer;
   }
+@media(max-width: 768px) {
+  .menu-toggle{
+    display: block;}
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #111;
     position: absolute;
-    top: 65px;
+    top: 70px;
     right: 0;
-    width: 100%;
+    width: 220px;
+    background: #fffbeb;
+    flex-direction: column;
     text-align: center;
+    padding: 20px 0;
+
+    transform: translateX(100%);
+    transition: 0.4s ease;
   }
 
-  .nav-links.show {
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links.active {
     transform: translateX(0);
   }
 }

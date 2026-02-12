@@ -20,10 +20,12 @@
   text-align: center;
 }
 .content-about h1{
+  color: #8a9a7e;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 .content-about h2{
+    color: #8a9a7e;
   font-size: 1.75rem;
   margin-bottom: 15px;
 }
