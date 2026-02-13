@@ -16,7 +16,7 @@ It is equiped with:
 
 
 ## Screenshot of the page
-![alt text]()
+![alt text](assets\Screenshot_13-2-2026_182932_127.0.0.1.jpeg)
 
 ## Set up abd installation
   ### The Repository
