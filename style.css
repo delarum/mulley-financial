@@ -142,7 +142,7 @@
 .hero-content button {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #496695;
+    background-color: #4ecdc4;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -151,7 +151,7 @@
 }
 .cta-btn {
   padding: 12px 25px;
-  background: #496695;
+  background: #4ecdc4;
   color: white;
   border: none;
   border-radius: 6px;
@@ -211,7 +211,7 @@
 .modal-box button {
   width: 100%;
   padding: 12px;
-  background: #496695;
+  background: #4ecdc4;
   color: white;
   border: none;
   margin-top: 10px;
@@ -291,6 +291,7 @@
 .overlay h3 {
   font-size: 30px;
   margin-bottom: 6px;
+  color: #4ecdc4;
 }
 
 .overlay p {
