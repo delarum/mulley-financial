@@ -21,7 +21,7 @@ It is equiped with:
 ## Set up abd installation
   ### The Repository
   ``` bash
-
+https://github.com/delarum/mulley-financial.git
   ```
 
 ## Technologies used
